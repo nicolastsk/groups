@@ -1,0 +1,171 @@
+ASSETS
+
+1) information
+2) computer system
+3) facilities
+4) users
+
+SECURITY DESIGN
+1) data
+2) app
+3) host
+4) internal network
+5) perimeter
+6) physical
+7) awarnes, policies
+
+IAA
+1) identification
+2) autentication
+3) authorization
+
+Autentication factors
+1) knoledge (you know)
+2) possesion (you have)
+3) inherence (you are)
+
+1) The knowledge authentication factor comes with all risks associated with using a username and password. Your password or PIN can be guessed, broken, stolen, or shoulder surfed. A user who wants to access data may have a keylogger installed on their computer.
+
+2) The inherence authentication factor allows users to authenticate using their biometric features. Latent fingerprint and photo manipulation are only two of many ways to cheat a biometric system. Modern biometric systems use liveness detection, which allows the system to spot most attempts at spoofing biometric methods of authentication.
+
+The biggest disadvantage of biometrics is that a biometric that was spoofed once cannot be reused. While you can change your password or buy a new phone, you cannot get a new retinal pattern.
+
+3) The possession authentication factor is generally based on a physical device. If a malicious actor gains access to your device, the factor is as good as broken. In the modern-day world, when all communication happens over a network, the malicious actor does not even have to steal your device. They can use social engineering to convince you to give them remote access to your device. Sometimes, the malicious actor does not even have to access your phone in any way. Some authentication methods are vulnerable to MITM attacks, which allow hackers to steal a user’s identity by eavesdropping on the communication between the user and the security system.
+
+Access Control
+1) authentication
+2) authorization
+3) access
+4) manage
+5) audit
+
+
+Importance of Access Control in Regulatory Compliance
+
+1) PCI DSS
+The Payment Card Industry Data Security Standard (PCI DSS) 
+2) HIPAA
+The Health Insurance Portability and Accountability Act (HIPAA)
+3) SOC 2
+Service Organization Control 2 (SOC 2) 
+4) ISO 27001
+The International Organization for Standardization (ISO)
+
+
+Access Control Types
+1) Role-Based Access Control (RBAC)
+2) Break-glass Access Control
+3) Rule-based Access Control
+4) Attribute-based Access Control (ABAC)
+5) Discretionary Access Control (DAC)
+6) Mandatory Access Control (MAC)
+
+
+FAR/FRR
+False Acceptance Rate (FAR): the percentage of identification instances in which unauthorised persons are incorrectly accepted.
+
+False Rejection Rate (FRR): the percentage of identification instances in which authorised persons are incorrectly rejected
+
+
+ANdersons's rule 
+In the field of computer security, Anderson's rule refers to a principle formulated by Ross J. Anderson: systems that handle sensitive personal information involve a trilemma of security, functionality and scale, of which you can choose any two. A system that has information on many data subjects and to which many people require access is hard to secure unless its functionality is severely restricted. If it has rich functionality, you may have to restrict the number of people with access, or accept that some information will leak.
+
+
+Target
+1) Data
+2) DBMS
+3) Applications
+4) Hardware
+5) Infrastructure
+
+
+Threats and challenges
+
+
+Insider threats
+An insider threat is a security threat from any one of three sources with privileged access to the database:
+A malicious insider who intends to do harm; A negligent insider who makes errors that make the database vulnerable to attack. An infiltrator—an outsider who somehow obtains credentials via a scheme such as phishing or by gaining access to the credential database itself. Insider threats are among the most common causes of database security breaches and are often the result of allowing too many employees to hold privileged user access credentials.
+
+
+
+Human error
+Accidents, weak passwords, password sharing, and other unwise or uninformed user behaviors continue to be the cause of nearly half (49%) of all reported data breaches.
+
+
+
+Exploitation of database software vulnerabilities
+Hackers make their living by finding and targeting vulnerabilities in all kinds of software, including database management software. All major commercial database software vendors and open source database management platforms issue regular security patches to address these vulnerabilities, but failure to apply these patches in a timely fashion can increase your exposure.
+
+SQL/NoSQL injection attacks
+A database-specific threat, these involve the insertion of arbitrary SQL or non-SQL attack strings into database queries served by web applications or HTTP headers. Organizations that don’t follow secure web application coding practices and perform regular vulnerability testing are open to these attacks.
+
+
+Buffer overflow exploitations
+Buffer overflow occurs when a process attempts to write more data to a fixed-length block of memory than it is allowed to hold. Attackers may use the excess data, stored in adjacent memory addresses, as a foundation from which to launch attacks.
+
+
+
+Malware
+Malware is software written specifically to exploit vulnerabilities or otherwise cause damage to the database. Malware may arrive via any endpoint device connecting to the database’s network.
+
+SQL/NoSQL injection attacks
+A database-specific threat, these involve the insertion of arbitrary SQL or non-SQL attack strings into database queries served by web applications or HTTP headers. Organizations that don’t follow secure web application coding practices and perform regular vulnerability testing are open to these attacks.
+
+
+Buffer overflow exploitations
+Buffer overflow occurs when a process attempts to write more data to a fixed-length block of memory than it is allowed to hold. Attackers may use the excess data, stored in adjacent memory addresses, as a foundation from which to launch attacks.
+
+
+Malware
+Malware is software written specifically to exploit vulnerabilities or otherwise cause damage to the database. Malware may arrive via any endpoint device connecting to the database’s network.
+
+
+Attacks on backups
+Organizations that fail to protect backup data with the same stringent controls used to protect the database itself can be vulnerable to attacks on backups.
+
+
+Denial of service (DoS/DDoS) attacks
+In a denial of service (DoS) attack, the attacker deluges the target server—in this case the database server—with so many requests that the server can no longer fulfill legitimate requests from actual users, and, in many cases, the server becomes unstable or crashes.
+
+In a distributed denial of service attack (DDoS), the deluge comes from multiple servers, making it more difficult to stop the attack.
+
+
+
+
+Best practices for protecting Database
+
+Physical security
+Whether your database server is on-premise or in a cloud data center, it must be located within a secure, climate-controlled environment. (If your database server is in a cloud data center, your cloud provider will take care of this for you.)
+
+
+
+Administrative and network access controls
+The practical minimum number of users should have access to the database, and their permissions should be restricted to the minimum levels necessary for them to do their jobs. Likewise, network access should be limited to the minimum level of permissions necessary.
+
+End user account/device security
+Always be aware of who is accessing the database and when and how the data is being used. Data monitoring solutions can alert you if data activities are unusual or appear risky. All user devices connecting to the network housing the database should be physically secure (in the hands of the right user only) and subject to security controls at all times.
+
+
+Encryption
+ALL data—including data in the database, and credential data—should be protected with best-in-class encryption while at rest and in transit. All encryption keys should be handled in accordance with best-practice guidelines.
+
+
+Database software security
+Always use the latest version of your database management software, and apply all patches as soon as they are issued.
+
+
+Application/web server security
+Any application or web server that interacts with the database can be a channel for attack and should be subject to ongoing security testing and best practice management.
+
+
+Backup security
+All backups, copies, or images of the database must be subject to the same (or equally stringent) security controls as the database itself.
+
+
+Auditing
+Record all logins to the database server and operating system, and log all operations performed on sensitive data as well. Database security standard audits should be performed regularly.
+
+
+
+
+
